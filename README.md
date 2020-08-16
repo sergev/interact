@@ -14,6 +14,9 @@ Here you can find sources of a C++ class Interact, which allows to run such appl
 It makes possible to automate the testing and develop REPL code using
 [TDD](https://en.wikipedia.org/wiki/Test-driven_development) approach.
 
+There it one limitation: the routine under test must finish when it reaches
+the and of input stream (EOF condition).
+
 Files [interact.h](interact.h) and [interact.cpp](interact.cpp) contains the sources
 of Interact implementation.
 

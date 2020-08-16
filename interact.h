@@ -89,7 +89,7 @@ private:
     public:
         Inbuf(Interact *i) : session(i) {}
     protected:
-        virtual int underflow();
+        virtual int underflow() override;
     };
     Inbuf input_buf { this };
 
@@ -105,7 +105,7 @@ private:
     // method getch() consumes it.
     //
     std::string send_buf;
-    unsigned send_pos { 0 };
+    size_t send_pos { 0 };
 
     //
     // Input stream from the control thread to the user task.
